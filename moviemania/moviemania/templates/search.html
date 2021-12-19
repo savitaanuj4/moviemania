@@ -1,0 +1,29 @@
+{% include 'base.html' %}
+<body>
+    <div class="search-field">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Movie-Mania</h2>
+                <p class="text-center">Search Your desired movies from OMDB.</p>
+            </div>
+            <div class="container">
+                <form method="" action="/find/" class="form-inline">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="selection" style="display: inline-flex;">
+                            {{ form.choice }}
+                        </div>
+                    </div>
+                    {{ form.search }}
+                    <div style="display: inline-flex;">
+                        <input class="btn btn-primary text-center search" type="submit" value="SEARCH" name="">
+                    </div>
+                    <div style="display: inline-flex;">
+                <input class="btn btn-primary text-center search" type="button" value="Go to Watchlist" onclick="location.href='{%url 'movie:watchlist'%}'">
+            </div>
+                </form>
+                
+            
+        </div>
+    </div>
+</body>
