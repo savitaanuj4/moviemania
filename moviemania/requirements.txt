@@ -1,3 +1,3 @@
 django==2.0
 requests
-<input type="button" value="Add to Watchlist" onclick="location.href='{%url 'movie:add'%}'">
+
